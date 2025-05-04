@@ -10,5 +10,5 @@ RUN apt-get update && \
     apt-get -y clean autoclean && \
     apt-get -y autoremove && \
     ln -s /config/workspace /workspace && \
-    rm -rf /var/lib/{apt,dpkg,cache,log/ && \
+    rm -rf /var/lib/{apt,dpkg,cache,log}/ && \
     echo ALL DONE
