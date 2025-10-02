@@ -1,4 +1,4 @@
-FROM hifigraz/code-server-python:latest
+FROM hifigraz/code_server_python:latest
 RUN echo ---- doing install && \
     echo INTO:  apt-get update && \
     echo INTO:  apt-get -y some packages && \

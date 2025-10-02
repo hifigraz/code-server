@@ -1,4 +1,4 @@
-FROM hifigraz/code-server-base:latest
+FROM hifigraz/code_server_base:latest
 RUN echo ---- doing install && \ 
     apt-get update && \
     apt-get -y install clang && \

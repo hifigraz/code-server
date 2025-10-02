@@ -1,4 +1,4 @@
-FROM hifigraz/code-server-base:latest
+FROM hifigraz/code_server_base:latest
 COPY ./files/bashrc /bashrc.python
 RUN echo ---- doing install && \
     apt-get update && \
