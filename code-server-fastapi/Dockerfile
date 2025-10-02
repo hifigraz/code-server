@@ -1,25 +1,9 @@
-FROM lscr.io/linuxserver/code-server:latest
-COPY ./files/bashrc /bashrc.python
-RUN apt-get update && \
-    apt-cache search python && \
-    apt-get -y install git && \
-    apt-get -y install python3 && \
-    apt-get -y install python3-pip && \
-    apt-get -y install python3-psycopg2 && \
-    apt-get -y install python3-venv && \
-    apt-get -y clean autoclean && \
-    apt-get -y autoremove && \
-    rm -rf /var/lib/{apt,dpkg,cache,log/ && \
-    chown -R abc:abc ~abc && \
-    ln -sf /usr/bin/python3 /usr/bin/python && \
-    ln -sf /usr/bin/pip3 /usr/bin/pip && \
-    sudo -u abc echo . /bashrc.python >> ~/.bashrc && \
-    sudo -u abc git config --global user.email foobar@sr.htlweiz.at && \
-    sudo -u abc git config --global user.name Student && \
-    sudo -u abc python -m venv --system-site-packages ~/venv/ && \ 
-    sudo -u abc ~/venv/bin/pip install sqlalchemy && \
-    sudo -u abc ~/venv/bin/pip install pydantic && \
-    sudo -u abc ~/venv/bin/pip install fastapi && \
-    sudo -u abc ~/venv/bin/pip install black && \
-    sudo -u abc ~/venv/bin/pip install isort && \
+FROM hifigraz/code-server-python:latest
+RUN echo ---- doing install && \
+    echo INTO:  apt-get update && \
+    echo INTO:  apt-get -y some packages && \
+    echo INTO:  apt-get -y clean autoclean && \
+    echo INTO:  apt-get -y autoremove && \
+    echo INTO:  rm -rf /var/lib/{apt,dpkg,cache,log/ && \
+    echo ---- doing config && \
     echo ALL DONE

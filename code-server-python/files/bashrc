@@ -1,0 +1,4 @@
+echo Hi
+export PATH=~/venv/bin:$PATH
+. ~/venv/bin/activate
+
