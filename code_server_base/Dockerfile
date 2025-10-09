@@ -12,4 +12,5 @@ RUN echo ---- doing install && \
     chown -R abc:abc ~abc && \
     sudo -u abc git config --global user.email foobar@sr.htlweiz.at && \
     sudo -u abc git config --global user.name Student && \
+    sudo -u abc git config --global pull.rebase false && \
     echo --- ALL DONE
